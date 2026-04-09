@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê</title>
+    <link rel="stylesheet" href="CSS/frame.css">
+    <link rel="stylesheet" href="CSS/format.css">
+    <link rel="stylesheet" href="CSS/color.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Thư viện Chart.js -->
+    <script src="ExFunct/function.js"></script> <!-- File chứa generateChart() -->
+</head>
+<body class="FText VioletThemes1 M0 Len JC">
+  <div class="WA HA MinH800 MinW600 TSdO">
+    <canvas id="myChart"></canvas>
+    <script>
+        // Lấy dữ liệu từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const dataQuery = urlParams.get("dataQuery");
+        const selectedType = urlParams.get("type"); // Lấy giá trị type từ URL
+        const selectedEndDate = urlParams.get("endDate"); // Lấy ngày cuối cùng từ URL (nếu có)
+
+        try {
+            // Giải mã và chuyển đổi sang JSON
+            const jsonData = JSON.parse(decodeURIComponent(dataQuery));
+
+            // Xử lý dữ liệu tùy theo loại 'day' hoặc 'month'
+            const transformedData = jsonData.reduce((acc, { paymentDay, amount }) => {
+                let key;
+
+                if (selectedType === 'day') {
+                    // Nếu 'day', sử dụng chính ngày để làm key
+                    key = paymentDay;
+                } else if (selectedType === 'month') {
+                    // Nếu 'month', lấy tháng và năm từ paymentDay (giả sử định dạng là 'YYYY-MM')
+                    const [year, month] = paymentDay.split('-'); // tách year và month
+                    key = `${year}-${month}`;
+                }
+
+                // Nếu key đã có trong acc, cộng thêm amount vào
+                if (acc[key]) {
+                    acc[key] += amount;
+                } else {
+                    // Nếu key chưa có trong acc, tạo mới
+                    acc[key] = amount;
+                }
+                return acc;
+            }, {});
+
+
+
+            generateChart("Thống kê", transformedData, "myChart");
+
+        } catch (error) {
+            console.error("Lỗi khi parse dữ liệu:", error);
+        }
+    </script>
+  </div>
+</body>
+</html>

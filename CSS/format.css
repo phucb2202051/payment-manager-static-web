@@ -1,0 +1,81 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.PosF {position: fixed;}
+
+
+.JS { justify-content: flex-start; }
+.JE { justify-content: flex-end; }
+.AS { align-items: flex-start; }
+.AE { align-items: flex-end; }
+.AC { align-items: center; }
+.JC { justify-content: center; }
+.TxR { text-align: right; }
+.TxC { text-align: center; }
+.TxL { text-align: left; }
+
+.Hor {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.Len {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.FText { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+
+
+.Tx6{ font-size: 6px; }
+.Tx8{ font-size: 8px; }
+.Tx10{ font-size: 10px; }
+.Tx12{ font-size: 12px; }
+.Tx14{ font-size: 14px; }
+.Tx16{ font-size: 16px; }
+.Tx18{ font-size: 18px; }
+.Tx20{ font-size: 20px; }
+.Tx24{ font-size: 24px; }
+.Tx28{ font-size: 28px; }
+.Tx32{ font-size: 32px; }
+.Tx36{ font-size: 36px; }
+.Tx40{ font-size: 40px; }
+.Tx48{ font-size: 48px; }
+.Tx56{ font-size: 56px; }
+.Tx64{ font-size: 64px; }
+.Tx72{ font-size: 72px; }
+.Tx80{ font-size: 80px; }
+.Tx88{ font-size: 88px; }
+.Tx96{ font-size: 96px; }
+.TxB{ font-weight: bold; }
+
+
+.G1{ gap: 1px;}
+.G2{ gap: 2px;}
+.G3{ gap: 3px;}
+.G4{ gap: 4px;}
+.G6{ gap: 6px;}
+.G8{ gap: 8px;}
+.G10{ gap: 10px;}
+.G12{ gap: 12px;}
+.G14{ gap: 14px;}
+.G16{ gap: 16px;}
+.G18{ gap: 18px;}
+.G20{ gap: 20px;}
+.G24{ gap: 24px;}
+.G28{ gap: 28px;} 
+.G32{ gap: 32px;}
+.G36{ gap: 36px;}
+.G40{ gap: 40px;}
+
+.G5pc{ gap: 5%;}
+.G10pc{ gap: 10%;}
+.G15pc{ gap: 15%;}
+.G20pc{ gap: 20%;}
+.G25pc{ gap: 25%;}

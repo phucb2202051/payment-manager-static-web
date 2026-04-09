@@ -1,0 +1,45 @@
+create database PaymentManager;
+CREATE USER 'PaymentManager'@'localhost' IDENTIFIED BY 'PMAD';
+GRANT ALL PRIVILEGES ON PaymentManager.* TO 'PaymentManager'@'localhost';
+FLUSH PRIVILEGES;
+
+
+
+
+-- Loại chi tiêu
+CREATE TABLE kind (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Mã loại chi (khóa chính)
+    beneficiary VARCHAR(255) NOT NULL   -- Người thụ hưởng
+);
+
+drop table payment;
+-- Tạo bảng chi tiêu
+CREATE TABLE payment (
+    id INT AUTO_INCREMENT PRIMARY KEY,           -- Mã chi tiêu (khóa chính)
+    kindId INT NULL REFERENCES kind(id),         -- Loại chi (có thể NULL)
+    amount INT NOT NULL,                         -- Số tiền chi tiêu
+    paymentDay DATETIME DEFAULT NOW(),           -- Thời gian chi tiêu
+    note TEXT                                    -- Ghi chú  
+);
+
+select * from payment;
+select * from kind;   
+
+-- Chèn dữ liệu vào bảng kind (Loại chi tiêu)
+INSERT INTO kind (beneficiary) VALUES
+('Tiền thuê nhà'),
+('Tiền điện nước'),
+('Tiền ăn uống'),
+('Tiền đi lại'),
+('Mua sắm cá nhân');
+
+-- Chèn dữ liệu vào bảng payment (Chi tiêu)
+INSERT INTO payment (kindId, amount, paymentDay, note) VALUES
+(1, 5000000, '2024-03-01 10:00:00', 'Thanh toán tiền thuê nhà tháng 3'),
+(2, 1500000, '2024-03-05 08:30:00', 'Hóa đơn điện nước tháng 2'),
+(3, 200000, '2024-03-06 12:15:00', 'Bữa trưa tại quán ăn'),
+(3, 350000, '2024-03-07 18:45:00', 'Đi ăn nhà hàng với bạn bè'),
+(4, 50000, '2024-03-08 07:20:00', 'Đổ xăng xe máy'),
+(5, 800000, '2024-03-10 15:00:00', 'Mua quần áo mới'),
+(5, 300000, '2024-03-12 17:30:00', 'Mua sách lập trình Java');
+

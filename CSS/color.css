@@ -1,0 +1,346 @@
+:root{
+    --Y:yellow;
+    --B:rgb(69, 69, 207);
+    --G:green;
+    --R:red;
+    --P:purple;
+    --O:orange;
+    --LY:rgb(238, 238, 181);
+    --LB:rgb(191, 231, 245);
+    --LG:rgb(170, 240, 170);
+    --LR:rgb(240, 145, 145);
+    --LP:rgb(255, 195, 204);
+    --LO:bisque;
+    --DY:darkgoldenrod;
+    --DB:rgb(3, 3, 112);
+    --DG:darkgreen;
+    --DR:darkred;
+    --DP:rgb(32, 5, 32);
+    --DO:darkorange;
+    --HvBig: 1.1; 
+    --HvSmall: 0.9;
+    --HvNormal: 1.02;
+}
+
+
+/*themes*/
+.BlackThemes { 
+    background-image: url("../picture/LoginBackground.webp"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1792/1024;
+    color: blue; text-shadow: -1px -1px 0 var(--O),  1px -1px 0 var(--O),  -1px  1px 0 var(--O),  1px  1px 0 var(--O);
+}
+.BlackThemes .BlackBox{ background-color: rgba(225, 225, 225, 0.5);}
+.BlackThemes .BlackButton{ background-color: var(--LB); border: 2px solid var(--B);}
+.BlackThemes .BlackButton:hover{ background-color: var(--B); border: 2px solid var(--O);}
+
+
+.VioletThemes1{ 
+    background-image: url("../picture/Violet2.webp"); 
+    background-size: cover; 
+    color: black; 
+    text-shadow: -1px -1px 0 var(--O),  1px -1px 0 var(--O),  -1px  1px 0 var(--O),  1px  1px 0 var(--O);
+}
+.VioletThemes1 .VioletBox{ background-color: #ffffff;}
+.VioletThemes1 .VioletBox:hover{ background-color: var(--LY);}
+.VioletThemes1 .VioletButton{ background-color: var(--LB); border: 2px solid var(--B);}
+.VioletThemes1 .VioletButton:hover{ background-color: var(--B); border: 2px solid var(--O);}
+
+
+.VtgThemes{ 
+    background-image: url("../picture/Violet1.jpg"); 
+    background-size: cover; 
+    color: black; 
+    text-shadow: -1px -1px 0 var(--O),  1px -1px 0 var(--O),  -1px  1px 0 var(--O),  1px  1px 0 var(--O);
+}
+.VtgThemes .VtgBox{ background-color: #ffffff;}
+.VtgThemes .VtgBox:hover{ background-color: var(--LY);}
+.VtgThemes .VtgButton{ background-color: var(--LB); border: 2px solid var(--B);}
+.VtgThemes .VtgButton:hover{ background-color: var(--B); border: 2px solid var(--O);}
+
+
+
+/*anmiation*/
+@keyframes slide {  from {right: -200px;} to {right: 0;}}
+.HvSlider {
+    position: fixed;
+    top: 0;
+    right: -160px;
+    transition: right 0.5s ease-in-out;
+}
+
+.HvSlider:hover {right: 0;}
+
+
+
+
+.HvLight1:hover { filter: brightness(1.1) contrast(0.9) saturate(0.8) blur(2px); }
+.HvWarm:hover { filter: brightness(1.2) contrast(1.2) saturate(1.5) sepia(1); }
+.HvDark:hover { filter: brightness(0.7) contrast(0.9) saturate(1.2) sepia(0.4); }
+.HvSunSet:hover { filter: brightness(1.1) contrast(1.1) saturate(1.5) sepia(0.6) hue-rotate(-10deg); }
+.HvLight:hover { filter: brightness(1.05) contrast(1.1) saturate(1.2) sepia(0.2) hue-rotate(5deg); }
+.HvBig:hover { transform: scale(var(--HvBig)); }
+.HvNormal:hover {transform: scale(var(--HvNormal));}
+.HvSmall:hover { transform: scale(var(--HvSmall)); }
+
+.TSdY { text-shadow: -1px -1px 0 var(--Y),  1px -1px 0 var(--Y),  -1px  1px 0 var(--Y),  1px  1px 0 var(--Y); }
+.TSdB { text-shadow: -1px -1px 0 var(--B),  1px -1px 0 var(--B),  -1px  1px 0 var(--B),  1px  1px 0 var(--B); }
+.TSdG { text-shadow: -1px -1px 0 var(--G),  1px -1px 0 var(--G),  -1px  1px 0 var(--G),  1px  1px 0 var(--G); }
+.TSdR { text-shadow: -1px -1px 0 var(--R),  1px -1px 0 var(--R),  -1px  1px 0 var(--R),  1px  1px 0 var(--R); }
+.TSdP { text-shadow: -1px -1px 0 var(--P),  1px -1px 0 var(--P),  -1px  1px 0 var(--P),  1px  1px 0 var(--P); }
+.TSdO { text-shadow: -1px -1px 0 var(--O),  1px -1px 0 var(--O),  -1px  1px 0 var(--O),  1px  1px 0 var(--O); }
+
+.TSdLY { text-shadow: -1px -1px 0 var(--LY),  1px -1px 0 var(--LY),  -1px  1px 0 var(--LY),  1px  1px 0 var(--LY); }
+.TSdLB { text-shadow: -1px -1px 0 var(--LB),  1px -1px 0 var(--LB),  -1px  1px 0 var(--LB),  1px  1px 0 var(--LB); }
+.TSdLG { text-shadow: -1px -1px 0 var(--LG),  1px -1px 0 var(--LG),  -1px  1px 0 var(--LG),  1px  1px 0 var(--LG); }
+.TSdLR { text-shadow: -1px -1px 0 var(--LR),  1px -1px 0 var(--LR),  -1px  1px 0 var(--LR),  1px  1px 0 var(--LR); }
+.TSdLP { text-shadow: -1px -1px 0 var(--LP),  1px -1px 0 var(--LP),  -1px  1px 0 var(--LP),  1px  1px 0 var(--LP); }
+.TSdLO { text-shadow: -1px -1px 0 var(--LO),  1px -1px 0 var(--LO),  -1px  1px 0 var(--LO),  1px  1px 0 var(--LO); }
+
+.TSdDY { text-shadow: -1px -1px 0 var(--DY),  1px -1px 0 var(--DY),  -1px  1px 0 var(--DY),  1px  1px 0 var(--DY); }
+.TSdDB { text-shadow: -1px -1px 0 var(--DB),  1px -1px 0 var(--DB),  -1px  1px 0 var(--DB),  1px  1px 0 var(--DB); }
+.TSdDG { text-shadow: -1px -1px 0 var(--DG),  1px -1px 0 var(--DG),  -1px  1px 0 var(--DG),  1px  1px 0 var(--DG); }
+.TSdDR { text-shadow: -1px -1px 0 var(--DR),  1px -1px 0 var(--DR),  -1px  1px 0 var(--DR),  1px  1px 0 var(--DR); }
+.TSdDP { text-shadow: -1px -1px 0 var(--DP),  1px -1px 0 var(--DP),  -1px  1px 0 var(--DP),  1px  1px 0 var(--DP); }
+.TSdDO { text-shadow: -1px -1px 0 var(--DO),  1px -1px 0 var(--DO),  -1px  1px 0 var(--DO),  1px  1px 0 var(--DO); }
+
+
+.AtBKY:active { background-color: var(--Y); }
+.AtBKB:active { background-color: var(--B); }
+.AtBKG:active { background-color: var(--G); }
+.AtBKR:active { background-color: var(--R); }
+.AtBKP:active { background-color: var(--P); }
+.AtBKO:active { background-color: var(--O); }
+
+.AtBKLY:active { background-color: var(--LY); }
+.AtBKLB:active { background-color: var(--LB); }
+.AtBKLG:active { background-color: var(--LG); }
+.AtBKLR:active { background-color: var(--LR); }
+.AtBKLP:active { background-color: var(--LP); }
+.AtBKLO:active { background-color: var(--LO); }
+
+.AtBKDY:active { background-color: var(--DY); }
+.AtBKDB:active { background-color: var(--DB); }
+.AtBKDG:active { background-color: var(--DG); }
+.AtBKDR:active { background-color: var(--DR); }
+.AtBKDP:active { background-color: var(--DP); }
+.AtBKDO:active { background-color: var(--DO); }
+
+.AtBdY:active { border-color: var(--Y); }
+.AtBdB:active { border-color: var(--B); }
+.AtBdG:active { border-color: var(--G); }
+.AtBdR:active { border-color: var(--R); }
+.AtBdP:active { border-color: var(--P); }
+.AtBdO:active { border-color: var(--O); }
+
+.AtBdLY:active { border-color: var(--LY); }
+.AtBdLB:active { border-color: var(--LB); }
+.AtBdLG:active { border-color: var(--LG); }
+.AtBdLR:active { border-color: var(--LR); }
+.AtBdLP:active { border-color: var(--LP); }
+.AtBdLO:active { border-color: var(--LO); }
+
+.AtBdDY:active { border-color: var(--DY); }
+.AtBdDB:active { border-color: var(--DB); }
+.AtBdDG:active { border-color: var(--DG); }
+.AtBdDR:active { border-color: var(--DR); } 
+.AtBdDP:active { border-color: var(--DP); }
+.AtBdDO:active { border-color: var(--DO); }
+
+.HvBKY:hover { background-color: var(--Y); }
+.HvBKB:hover { background-color: var(--B); }
+.HvBKG:hover { background-color: var(--G); }
+.HvBKR:hover { background-color: var(--R); }
+.HvBKP:hover { background-color: var(--P); }
+.HvBKO:hover { background-color: var(--O); }
+
+.HvBKLY:hover { background-color: var(--LY); }
+.HvBKLB:hover { background-color: var(--LB); }
+.HvBKLG:hover { background-color: var(--LG); }
+.HvBKLR:hover { background-color: var(--LR); }
+.HvBKLP:hover { background-color: var(--LP); }
+.HvBKLO:hover { background-color: var(--LO); }
+
+.HvBKDY:hover { background-color: var(--DY); }
+.HvBKDB:hover { background-color: var(--DB); }
+.HvBKDG:hover { background-color: var(--DG); }
+.HvBKDR:hover { background-color: var(--DR); }
+.HvBKDP:hover { background-color: var(--DP); }
+.HvBKDO:hover { background-color: var(--DO); }
+
+.HvBdY:hover { border-color: var(--Y); }
+.HvBdB:hover { border-color: var(--B); }
+.HvBdG:hover { border-color: var(--G); }
+.HvBdR:hover { border-color: var(--R); }
+.HvBdP:hover { border-color: var(--P); }
+.HvBdO:hover { border-color: var(--O); }
+
+.HvBdLY:hover { border-color: var(--LY); }
+.HvBdLB:hover { border-color: var(--LB); }
+.HvBdLG:hover { border-color: var(--LG); }
+.HvBdLR:hover { border-color: var(--LR); }
+.HvBdLP:hover { border-color: var(--LP); }
+.HvBdLO:hover { border-color: var(--LO); }
+
+.HvBdDY:hover { border-color: var(--DY); }
+.HvBdDB:hover { border-color: var(--DB); }
+.HvBdDG:hover { border-color: var(--DG); }
+.HvBdDR:hover { border-color: var(--DR); }
+.HvBdDP:hover { border-color: var(--DP); }
+.HvBdDO:hover { border-color: var(--DO); }
+
+.FcBKY:focus { background-color: var(--Y); }
+.FcBKB:focus { background-color: var(--B); }
+.FcBKG:focus { background-color: var(--G); }
+.FcBKR:focus { background-color: var(--R); }
+.FcBKP:focus { background-color: var(--P); }
+.FcBKO:focus { background-color: var(--O); }
+
+.FcBKLY:focus { background-color: var(--LY); }
+.FcBKLB:focus { background-color: var(--LB); }
+.FcBKLG:focus { background-color: var(--LG); }
+.FcBKLR:focus { background-color: var(--LR); }
+.FcBKLP:focus { background-color: var(--LP); }
+.FcBKLO:focus { background-color: var(--LO); }
+
+.FcBKDY:focus { background-color: var(--DY); }
+.FcBKDB:focus { background-color: var(--DB); }
+.FcBKDG:focus { background-color: var(--DG); }
+.FcBKDR:focus { background-color: var(--DR); }
+.FcBKDP:focus { background-color: var(--DP); }
+.FcBKDO:focus { background-color: var(--DO); }
+
+.FcBdY:focus { border-color: var(--Y); }
+.FcBdB:focus { border-color: var(--B); }
+.FcBdG:focus { border-color: var(--G); }
+.FcBdR:focus { border-color: var(--R); }
+.FcBdP:focus { border-color: var(--P); }
+.FcBdO:focus { border-color: var(--O); }
+
+.FcBdLY:focus { border-color: var(--LY); }
+.FcBdLB:focus { border-color: var(--LB); }
+.FcBdLG:focus { border-color: var(--LG); }
+.FcBdLR:focus { border-color: var(--LR); }
+.FcBdLP:focus { border-color: var(--LP); }
+.FcBdLO:focus { border-color: var(--LO); }
+
+.FcBdDY:focus { border-color: var(--DY); }
+.FcBdDB:focus { border-color: var(--DB); }
+.FcBdDG:focus { border-color: var(--DG); }
+.FcBdDR:focus { border-color: var(--DR); }
+.FcBdDP:focus { border-color: var(--DP); }
+.FcBdDO:focus { border-color: var(--DO); }
+
+.VlBKY:valid { background-color: var(--Y); }
+.VlBKB:valid { background-color: var(--B); }
+.VlBKG:valid { background-color: var(--G); }
+.VlBKR:valid { background-color: var(--R); }
+.VlBKP:valid { background-color: var(--P); }
+.VlBKO:valid { background-color: var(--O); }
+
+.VlBKLY:valid { background-color: var(--LY); }
+.VlBKLB:valid { background-color: var(--LB); }
+.VlBKLG:valid { background-color: var(--LG); }
+.VlBKLR:valid { background-color: var(--LR); }
+.VlBKLP:valid { background-color: var(--LP); }
+.VlBKLO:valid { background-color: var(--LO); }
+
+.VlBKDY:valid { background-color: var(--DY); }
+.VlBKDB:valid { background-color: var(--DB); }
+.VlBKDG:valid { background-color: var(--DG); }
+.VlBKDR:valid { background-color: var(--DR); }
+.VlBKDP:valid { background-color: var(--DP); }
+.VlBKDO:valid { background-color: var(--DO); }
+
+.VlBdY:valid { border-color: var(--Y); }
+.VlBdB:valid { border-color: var(--B); }
+.VlBdG:valid { border-color: var(--G); }
+.VlBdR:valid { border-color: var(--R); }
+.VlBdP:valid { border-color: var(--P); }
+.VlBdO:valid { border-color: var(--O); }
+
+.VlBdLY:valid { border-color: var(--LY); }
+.VlBdLB:valid { border-color: var(--LB); }
+.VlBdLG:valid { border-color: var(--LG); }
+.VlBdLR:valid { border-color: var(--LR); }
+.VlBdLP:valid { border-color: var(--LP); }
+.VlBdLO:valid { border-color: var(--LO); }
+
+.VlBdDY:valid { border-color: var(--DY); }
+.VlBdDB:valid { border-color: var(--DB); }
+.VlBdDG:valid { border-color: var(--DG); }
+.VlBdDR:valid { border-color: var(--DR); }
+.VlBdDP:valid { border-color: var(--DP); }
+.VlBdDO:valid { border-color: var(--DO); }
+
+
+
+
+
+
+.BKW { background-color: #ffffff;}
+.BKY { background-color: var(--Y); }
+.BKB { background-color: var(--B); }
+.BKG { background-color: var(--G); }
+.BKR { background-color: var(--R); }
+.BKP { background-color: var(--P); }
+.BKO { background-color: var(--O); }
+
+.BKLY { background-color: var(--LY); }
+.BKLB { background-color: var(--LB); }
+.BKLG { background-color: var(--LG); }
+.BKLR { background-color: var(--LR); }
+.BKLP { background-color: var(--LP); }
+.BKLO { background-color: var(--LO); }
+
+.BKDY { background-color: var(--DY); }
+.BKDB { background-color: var(--DB); }
+.BKDG { background-color: var(--DG); }
+.BKDR { background-color: var(--DR); }
+.BKDP { background-color: var(--DP); }
+.BKDO { background-color: var(--DO); }
+
+.BdY { border-color: var(--Y); }
+.BdB { border-color: var(--B); }
+.BdG { border-color: var(--G); }
+.BdR { border-color: var(--R); }
+.BdP { border-color: var(--P); }
+.BdO { border-color: var(--O); }
+
+.BdLY { border-color: var(--LY); }
+.BdLB { border-color: var(--LB); }
+.BdLG { border-color: var(--LG); }
+.BdLR { border-color: var(--LR); }
+.BdLP { border-color: var(--LP); }
+.BdLO { border-color: var(--LO); }
+
+.BdDY { border-color: var(--DY); }
+.BdDB { border-color: var(--DB); }
+.BdDG { border-color: var(--DG); }
+.BdDR { border-color: var(--DR); }
+.BdDP { border-color: var(--DP); }
+.BdDO { border-color: var(--DO); }
+
+.FBl { color: black;}
+.FY { color: var(--Y); }
+.FB { color: var(--B); }
+.FG { color: var(--G); }
+.FR { color: var(--R); }
+.FP { color: var(--P); }
+.FO { color: var(--O); }
+
+.FLY { color: var(--LY); }
+.FLB { color: var(--LB); }
+.FLG { color: var(--LG); }
+.FLR { color: var(--LR); }
+.FLP { color: var(--LP); }
+.FLO { color: var(--LO); }
+
+.FDY { color: var(--DY); }
+.FDB { color: var(--DB); }
+.FDG { color: var(--DG); }
+.FDR { color: var(--DR); }
+.FDP { color: var(--DP); }
+.FDO { color: var(--DO); }
